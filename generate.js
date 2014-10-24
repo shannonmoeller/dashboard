@@ -1,77 +1,84 @@
+/* jshint node:true */
 'use strict';
 
-var stream,
-    fs = require('fs'),
-    file = __dirname + '/README.md',
-    accounts = [
-        {
-            user: 'shannonmoeller',
-            repos: [
-                { name: 'coat' },
-                { name: 'connect-spawn' },
-                { name: 'copier.js', npm: 'copier' },
-                { name: 'doxit' },
-                { name: 'func.js', npm: 'func' },
-                { name: 'get-context' },
-                { name: 'gimmie.js', npm: 'gimmie' },
-                { name: 'grunt-force' },
-                { name: 'grunt-hbt' },
-                { name: 'gulp-hb' },
-                { name: 'handlebars-layouts' },
-                { name: 'hunk' },
-                { name: 'mute' },
-                { name: 'nopt-grunt' },
-                { name: 'sire' },
-                { name: 'workit' }
-            ]
-        },
-        {
-            user: 'militiajs',
-            repos: [
-                { name: 'mdom' },
-                { name: 'mjax' },
-                { name: 'mmvc' },
-                { name: 'mtil' }
-            ]
-        },
-        {
-            user: 'togajs',
-            repos: [
-                { name: 'toga' },
-                { name: 'toga-compiler-pulla' },
-                { name: 'toga-compiler-pura' },
-                { name: 'toga-formatter-markdown' },
-                { name: 'toga-parser-js' },
-                { name: 'tunic' }
-            ]
-        }
-    ];
+var fs = require('fs');
 
-// Delete
-fs.unlinkSync(file);
+function generate(accounts) {
+    var stream,
+        file = __dirname + '/README.md';
 
-// Create
-stream = fs.createWriteStream(file);
-stream.write('# dashboard\n');
+    // Delete
+    fs.unlinkSync(file);
 
-// Generate
-accounts.forEach(function (account) {
-    var user = account.user;
+    // Create
+    stream = fs.createWriteStream(file);
+    stream.write('# dashboard\n');
 
-    stream.write('\n' + user + ' | version | downloads | dependencies | devDependencies\n');
-    stream.write('---|---|---|---|---\n');
+    // Generate
+    accounts.forEach(function (account) {
+        var user = account.user;
 
-    account.repos.forEach(function (repo) {
-        var name = repo.name,
-            npm = repo.npm || name,
-            id = user + '/' + name;
+        // Header
+        stream.write('\n' + user + ' | version | downloads | dependencies | devDependencies\n');
+        stream.write('---|---|---|---|---\n');
 
-        stream.write(
-            '[' + name + '](http://github.com/' + id + ') ' +
-            '| [![version](http://img.shields.io/npm/v/' + npm + '.svg?style=flat-square)](http://npmjs.org/' + npm + ') ' +
-            '| [![downloads](http://img.shields.io/npm/dm/' + npm + '.svg?style=flat-square)](http://npmjs.org/' + npm + ') ' +
-            '| [![dependencies](http://david-dm.org/' + id + '.svg?style=flat-square)](http://david-dm.org/' + id + ') ' +
-            '| [![devDependencies](http://david-dm.org/' + id + '/dev-status.svg?style=flat-square)](http://david-dm.org/' + id + ')\n'
-        );
+        // Rows
+        account.repos.forEach(function (repo) {
+            var name = repo.name,
+                npm = repo.npm || name,
+                id = user + '/' + name;
+
+            stream.write(
+                '[' + name + '](http://github.com/' + id + ') ' +
+                '| [![version](http://img.shields.io/npm/v/' + npm + '.svg?style=flat-square)](http://npmjs.org/' + npm + ') ' +
+                '| [![downloads](http://img.shields.io/npm/dm/' + npm + '.svg?style=flat-square)](http://npmjs.org/' + npm + ') ' +
+                '| [![dependencies](http://david-dm.org/' + id + '.svg?style=flat-square)](http://david-dm.org/' + id + ') ' +
+                '| [![devDependencies](http://david-dm.org/' + id + '/dev-status.svg?style=flat-square)](http://david-dm.org/' + id + ')\n'
+            );
+        });
     });
-});
+}
+
+generate([
+    {
+        user: 'shannonmoeller',
+        repos: [
+            { name: 'coat' },
+            { name: 'connect-spawn' },
+            { name: 'copier.js', npm: 'copier' },
+            { name: 'doxit' },
+            { name: 'func.js', npm: 'func' },
+            { name: 'get-context' },
+            { name: 'gimmie.js', npm: 'gimmie' },
+            { name: 'grunt-force' },
+            { name: 'grunt-hbt' },
+            { name: 'gulp-hb' },
+            { name: 'handlebars-layouts' },
+            { name: 'hunk' },
+            { name: 'mute' },
+            { name: 'nopt-grunt' },
+            { name: 'sire' },
+            { name: 'workit' }
+        ]
+    },
+    {
+        user: 'militiajs',
+        repos: [
+            { name: 'mdom' },
+            { name: 'mjax' },
+            { name: 'mmvc' },
+            { name: 'mtil' }
+        ]
+    },
+    {
+        user: 'togajs',
+        repos: [
+            { name: 'toga' },
+            { name: 'toga-compiler-pulla' },
+            { name: 'toga-compiler-pura' },
+            { name: 'toga-formatter-markdown' },
+            { name: 'toga-parser-js' },
+            { name: 'tunic' }
+        ]
+    }
+]);
