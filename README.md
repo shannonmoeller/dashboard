@@ -1,7 +1,7 @@
 # dashboard
 
-shannonmoeller | downloads | dependencies | devDependencies
----|---|---|---
+shannonmoeller | version | downloads | dependencies | devDependencies
+---|---|---|---|---
 [coat](http://github.com/shannonmoeller/coat) | ![version](http://img.shields.io/npm/v/coat.svg?style=flat-square) | ![downloads](http://img.shields.io/npm/dm/coat.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/coat.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/coat.svg?style=flat-square)
 [connect-spawn](http://github.com/shannonmoeller/connect-spawn) | ![version](http://img.shields.io/npm/v/connect-spawn.svg?style=flat-square) | ![downloads](http://img.shields.io/npm/dm/connect-spawn.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/connect--spawn.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/connect--spawn.svg?style=flat-square)
 [copier.js](http://github.com/shannonmoeller/copier.js) | ![version](http://img.shields.io/npm/v/copier.svg?style=flat-square) | ![downloads](http://img.shields.io/npm/dm/copier.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/copier.js.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/copier.js.svg?style=flat-square)
@@ -19,15 +19,15 @@ shannonmoeller | downloads | dependencies | devDependencies
 [sire](http://github.com/shannonmoeller/sire) | ![version](http://img.shields.io/npm/v/sire.svg?style=flat-square) | ![downloads](http://img.shields.io/npm/dm/sire.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/sire.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/sire.svg?style=flat-square)
 [workit](http://github.com/shannonmoeller/workit) | ![version](http://img.shields.io/npm/v/workit.svg?style=flat-square) | ![downloads](http://img.shields.io/npm/dm/workit.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/workit.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/workit.svg?style=flat-square)
 
-militiajs | downloads | dependencies | devDependencies
----|---|---|---
+militiajs | version | downloads | dependencies | devDependencies
+---|---|---|---|---
 [mdom](http://github.com/militiajs/mdom) | ![version](http://img.shields.io/npm/v/mdom.svg?style=flat-square) | ![downloads](http://img.shields.io/npm/dm/mdom.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/militiajs/mdom.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/militiajs/mdom.svg?style=flat-square)
 [mjax](http://github.com/militiajs/mjax) | ![version](http://img.shields.io/npm/v/mjax.svg?style=flat-square) | ![downloads](http://img.shields.io/npm/dm/mjax.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/militiajs/mjax.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/militiajs/mjax.svg?style=flat-square)
 [mmvc](http://github.com/militiajs/mmvc) | ![version](http://img.shields.io/npm/v/mmvc.svg?style=flat-square) | ![downloads](http://img.shields.io/npm/dm/mmvc.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/militiajs/mmvc.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/militiajs/mmvc.svg?style=flat-square)
 [mtil](http://github.com/militiajs/mtil) | ![version](http://img.shields.io/npm/v/mtil.svg?style=flat-square) | ![downloads](http://img.shields.io/npm/dm/mtil.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/militiajs/mtil.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/militiajs/mtil.svg?style=flat-square)
 
-togajs | downloads | dependencies | devDependencies
----|---|---|---
+togajs | version | downloads | dependencies | devDependencies
+---|---|---|---|---
 [toga](http://github.com/togajs/toga) | ![version](http://img.shields.io/npm/v/toga.svg?style=flat-square) | ![downloads](http://img.shields.io/npm/dm/toga.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/togajs/toga.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/togajs/toga.svg?style=flat-square)
 [toga-compiler-pulla](http://github.com/togajs/toga-compiler-pulla) | ![version](http://img.shields.io/npm/v/toga-compiler-pulla.svg?style=flat-square) | ![downloads](http://img.shields.io/npm/dm/toga-compiler-pulla.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/togajs/toga--compiler-pulla.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/togajs/toga--compiler-pulla.svg?style=flat-square)
 [toga-compiler-pura](http://github.com/togajs/toga-compiler-pura) | ![version](http://img.shields.io/npm/v/toga-compiler-pura.svg?style=flat-square) | ![downloads](http://img.shields.io/npm/dm/toga-compiler-pura.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/togajs/toga--compiler-pura.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/togajs/toga--compiler-pura.svg?style=flat-square)

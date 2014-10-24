@@ -58,8 +58,8 @@ stream.write('# dashboard\n');
 accounts.forEach(function (account) {
     var user = account.user;
 
-    stream.write('\n' + user + ' | downloads | dependencies | devDependencies\n');
-    stream.write('---|---|---|---\n');
+    stream.write('\n' + user + ' | version | downloads | dependencies | devDependencies\n');
+    stream.write('---|---|---|---|---\n');
 
     account.repos.forEach(function (repo) {
         var name = repo.name,
