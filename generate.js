@@ -64,15 +64,14 @@ accounts.forEach(function (account) {
     account.repos.forEach(function (repo) {
         var name = repo.name,
             npm = repo.npm || name,
-            id = user + '/' + name,
-            img = id.replace(/-/, '--');
+            id = user + '/' + name;
 
         stream.write(
             '[' + name + '](http://github.com/' + id + ') ' +
             '| ![version](http://img.shields.io/npm/v/' + npm + '.svg?style=flat-square) ' +
             '| ![downloads](http://img.shields.io/npm/dm/' + npm + '.svg?style=flat-square) ' +
-            '| ![dependencies](http://david-dm.org/' + img + '.svg?style=flat-square) ' +
-            '| ![devDependencies](http://david-dm.org/' + img + '/dev-status.svg?style=flat-square)\n'
+            '| ![dependencies](http://david-dm.org/' + id + '.svg?style=flat-square) ' +
+            '| ![devDependencies](http://david-dm.org/' + id + '/dev-status.svg?style=flat-square)\n'
         );
     });
 });
