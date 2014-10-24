@@ -1,4 +1,17 @@
 dashboard
 =========
 
-Because diligence.
+shannonmoeller | downloads | dependencies | devDpendencies
+---------------|-----------|--------------|---------------
+coat | ![downloads](http://img.shields.io/npm/dm/coat.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/coat.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/coat.svg?style=flat-square)
+copier | ![downloads](http://img.shields.io/npm/dm/copier.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/copier.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/copier.svg?style=flat-square)
+func | ![downloads](http://img.shields.io/npm/dm/func.svg?style=flat-square?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/func.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/func.svg?style=flat-square)
+get-context | ![downloads](http://img.shields.io/npm/dm/get-context.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/get-context.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/get-context.svg?style=flat-square)
+gimmie | ![downloads](http://img.shields.io/npm/dm/gimmie.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/gimmie.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/gimmie.svg?style=flat-square)
+grunt-force | ![downloads](http://img.shields.io/npm/dm/grunt-force.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/grunt-force.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/grunt-force.svg?style=flat-square)
+grunt-hbt | ![downloads](http://img.shields.io/npm/dm/grunt-hbt.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/grunt-hbt.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/grunt-hbt.svg?style=flat-square)
+gulp-hb | ![downloads](http://img.shields.io/npm/dm/gulp-hb.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/gulp-hb.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/gulp-hb.svg?style=flat-square)
+handlebars-layouts | ![downloads](http://img.shields.io/npm/dm/handlebars-layouts.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/handlebars-layouts.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/handlebars-layouts.svg?style=flat-square)
+hunk | ![downloads](http://img.shields.io/npm/dm/hunk.svg?style=flat-square?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/hunk.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/hunk.svg?style=flat-square)
+mute | ![downloads](http://img.shields.io/npm/dm/mute.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/mute.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/mute.svg?style=flat-square)
+sire | ![downloads](http://img.shields.io/npm/dm/sire.svg?style=flat-square) | ![dependencies](http://img.shields.io/david/shannonmoeller/sire.svg?style=flat-square) | ![devDependencies](http://img.shields.io/david/dev/shannonmoeller/sire.svg?style=flat-square)
