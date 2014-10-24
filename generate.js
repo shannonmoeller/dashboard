@@ -65,15 +65,14 @@ accounts.forEach(function (account) {
         var name = repo.name,
             npm = repo.npm || name,
             id = user + '/' + name,
-            img = id.replace(/-/, '--'),
-            ext = '.svg?style=flat-square';
+            img = id.replace(/-/, '--');
 
         stream.write(
             '[' + name + '](http://github.com/' + id + ') ' +
-            '| ![version](http://img.shields.io/npm/v/' + npm + ext + ') ' +
-            '| ![downloads](http://img.shields.io/npm/dm/' + npm + ext + ') ' +
-            '| ![dependencies](http://david-dm.org/' + img + ext + ') ' +
-            '| ![devDependencies](http://david-dm.org/dev/' + img + ext + ')\n'
+            '| ![version](http://img.shields.io/npm/v/' + npm + '.svg?style=flat-square) ' +
+            '| ![downloads](http://img.shields.io/npm/dm/' + npm + '.svg?style=flat-square) ' +
+            '| ![dependencies](http://david-dm.org/' + img + '.svg?style=flat-square) ' +
+            '| ![devDependencies](http://david-dm.org/' + img + '/dev-status.svg?style=flat-square)\n'
         );
     });
 });
