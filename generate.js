@@ -72,8 +72,8 @@ accounts.forEach(function (account) {
             '[' + name + '](http://github.com/' + id + ') ' +
             '| ![version](http://img.shields.io/npm/v/' + npm + ext + ') ' +
             '| ![downloads](http://img.shields.io/npm/dm/' + npm + ext + ') ' +
-            '| ![dependencies](http://img.shields.io/david/' + img + ext + ') ' +
-            '| ![devDependencies](http://img.shields.io/david/dev/' + img + ext + ')\n'
+            '| ![dependencies](http://david-dm.org/' + img + ext + ') ' +
+            '| ![devDependencies](http://david-dm.org/dev/' + img + ext + ')\n'
         );
     });
 });
