@@ -47,12 +47,14 @@ var stream,
         }
     ];
 
+// Delete
 fs.unlinkSync(file);
 
+// Create
 stream = fs.createWriteStream(file);
-
 stream.write('# dashboard\n');
 
+// Generate
 accounts.forEach(function (account) {
     var user = account.user;
 
@@ -68,6 +70,7 @@ accounts.forEach(function (account) {
 
         stream.write(
             '[' + name + '](http://github.com/' + id + ') ' +
+            '| ![version](http://img.shields.io/npm/v/' + npm + ext + ') ' +
             '| ![downloads](http://img.shields.io/npm/dm/' + npm + ext + ') ' +
             '| ![dependencies](http://img.shields.io/david/' + img + ext + ') ' +
             '| ![devDependencies](http://img.shields.io/david/dev/' + img + ext + ')\n'
