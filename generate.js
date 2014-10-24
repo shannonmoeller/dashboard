@@ -68,10 +68,10 @@ accounts.forEach(function (account) {
 
         stream.write(
             '[' + name + '](http://github.com/' + id + ') ' +
-            '| ![version](http://img.shields.io/npm/v/' + npm + '.svg?style=flat-square) ' +
-            '| ![downloads](http://img.shields.io/npm/dm/' + npm + '.svg?style=flat-square) ' +
-            '| ![dependencies](http://david-dm.org/' + id + '.svg?style=flat-square) ' +
-            '| ![devDependencies](http://david-dm.org/' + id + '/dev-status.svg?style=flat-square)\n'
+            '| [![version](http://img.shields.io/npm/v/' + npm + '.svg?style=flat-square)](http://npmjs.org/' + npm + ') ' +
+            '| [![downloads](http://img.shields.io/npm/dm/' + npm + '.svg?style=flat-square)](http://npmjs.org/' + npm + ') ' +
+            '| [![dependencies](http://david-dm.org/' + id + '.svg?style=flat-square)](http://david-dm.org/' + id + ') ' +
+            '| [![devDependencies](http://david-dm.org/' + id + '/dev-status.svg?style=flat-square)](http://david-dm.org/' + id + ')\n'
         );
     });
 });
