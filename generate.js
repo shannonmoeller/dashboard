@@ -19,8 +19,8 @@ function generate(accounts) {
         var user = account.user;
 
         // Header
-        stream.write('\n' + user + ' | version | downloads | dependencies | devDependencies\n');
-        stream.write('---|---|---|---|---\n');
+        stream.write('\n' + user + ' | version | downloads | status | dependencies | devDependencies\n');
+        stream.write('---|---|---|---|---|---\n');
 
         // Rows
         account.repos.forEach(function (repo) {
