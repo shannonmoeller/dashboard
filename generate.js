@@ -13,15 +13,18 @@ function generate(accounts) {
 
 	// Create
 	stream = fs.createWriteStream(file);
-	stream.write('# dashboard\n');
+	stream.write('# dashboard\n\n');
+
+	// Header
+	stream.write('repo | version | downloads | status | coverage | dependencies | devDependencies\n');
+	stream.write('-----|---------|-----------|--------|----------|--------------|----------------\n');
 
 	// Generate
 	accounts.forEach(function (account) {
 		var user = account.user;
 
-		// Header
-		stream.write('\n' + user + ' | version | downloads | status | coverage | dependencies | devDependencies\n');
-		stream.write('---|---|---|---|---|---|---\n');
+		// Separator
+		stream.write(user + ' | | | | | |\n');
 
 		// Rows
 		account.repos.forEach(function (repo) {
