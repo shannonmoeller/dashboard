@@ -1,7 +1,7 @@
 ---
 ---
 
-# dashboard
+# Shannon Moeller’s Dashboard
 
 repo | version | downloads | status | coverage | dependencies | devDependencies
 -----|---------|-----------|--------|----------|--------------|----------------
