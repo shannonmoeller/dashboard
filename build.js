@@ -61,7 +61,7 @@ Promise
 
 		// Create
 		stream = fs.createWriteStream(file);
-		stream.write('# dashboard\n\n');
+		stream.write('---\n---\n\n# dashboard\n\n');
 
 		// Header
 		stream.write('repo | version | downloads | status | coverage | dependencies | devDependencies\n');
