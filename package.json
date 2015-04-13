@@ -1,0 +1,7 @@
+{
+  "name": "dashboard",
+  "private": true,
+  "dependencies": {
+    "npm-registry": "^0.1.13"
+  }
+}
