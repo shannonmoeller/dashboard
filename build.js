@@ -45,11 +45,7 @@ function append(stream, pkg) {
 	);
 }
 
-Promise
-	.resolve('shannonmoeller')
-	.then(function (name) {
-		return getUserPackages(name);
-	})
+getUserPackages('shannonmoeller')
 	.then(function (pkgs) {
 		return Promise.all(pkgs.map(getPackageInfo));
 	})
