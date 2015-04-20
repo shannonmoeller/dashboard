@@ -37,14 +37,14 @@ function appendRow(stream, pkg) {
 		id = repo.join('/');
 
 	stream.write(
-		'[' + npmName                                                                                               + ' ](https://github.com/'             + id      + ') | ' +
-		'[![version  ](https://img.shields.io/npm/v/'               + npmName + '.svg?style=flat-square'            + ')](https://npmjs.org/package/'      + npmName + ') | ' +
-		'[![downloads](https://img.shields.io/npm/dm/'              + npmName + '.svg?style=flat-square'            + ')](https://npmjs.org/package/'      + npmName + ') | ' +
-		'[![status   ](https://img.shields.io/travis/'              + id      + '.svg?style=flat-square'            + ')](https://travis-ci.org/'          + id      + ') | ' +
-		'[![coverage ](https://img.shields.io/coveralls/'           + id      + '/master.svg?style=flat-square'     + ')](https://coveralls.io/r/'         + id      + ') | ' +
-		'[![climate  ](https://img.shields.io/codeclimate/github/'  + id      + '.svg?style=flat-square'            + ')](https://codeclimate.com/github/' + id      + ') | ' +
-		'[![deps     ](https://david-dm.org/'                       + id      + '.svg?style=flat-square'            + ')](https://david-dm.org/'           + id      + ') | ' +
-		'[![devDeps  ](https://david-dm.org/'                       + id      + '/dev-status.svg?style=flat-square' + ')](https://david-dm.org/'           + id      + ')\n'
+		'[' + npmName                                                                                          + ' ](https://github.com/'             + id      + ') | ' +
+		'[![version  ](https://img.shields.io/npm/v/'              + npmName + '.svg?style=flat-square'        + ')](https://npmjs.org/package/'      + npmName + ') | ' +
+		'[![downloads](https://img.shields.io/npm/dm/'             + npmName + '.svg?style=flat-square'        + ')](https://npmjs.org/package/'      + npmName + ') | ' +
+		'[![status   ](https://img.shields.io/travis/'             + id      + '.svg?style=flat-square'        + ')](https://travis-ci.org/'          + id      + ') | ' +
+		'[![coverage ](https://img.shields.io/coveralls/'          + id      + '/master.svg?style=flat-square' + ')](https://coveralls.io/r/'         + id      + ') | ' +
+		'[![climate  ](https://img.shields.io/codeclimate/github/' + id      + '.svg?style=flat-square'        + ')](https://codeclimate.com/github/' + id      + ') | ' +
+		'[![deps     ](https://img.shields.io/david/'              + id      + '.svg?style=flat-square'        + ')](https://david-dm.org/'           + id      + ') | ' +
+		'[![devDeps  ](https://img.shields.io/david/dev/'          + id      + '.svg?style=flat-square'        + ')](https://david-dm.org/'           + id      + ')\n'
 	);
 }
 
