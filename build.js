@@ -7,25 +7,27 @@ var Registry = require('npm-registry'),
 	fs = require('fs'),
 	file = __dirname + '/index.md';
 
-function getUserPackages(name) {
+function getUserPackages(user) {
 	return new Promise(function (resolve, reject) {
-		npm.users.list(name, function (err, modules) {
-			if (err) reject(err);
-			else resolve(modules);
+		npm.users.list(user, function (err, data) {
+			return err ? reject(err) : resolve(data);
 		});
 	});
 }
 
 function getPackageInfo(pkg) {
 	return new Promise(function (resolve, reject) {
-		npm.packages.get(pkg.name, function (err, info) {
-			if (err) reject(err);
-			else resolve(info);
+		npm.packages.get(pkg.name, function (err, data) {
+			return err ? reject(err) : resolve(data);
 		});
 	});
 }
 
-function append(stream, pkg) {
+function getPackagesInfo(pkgs) {
+	return Promise.all(pkgs.map(getPackageInfo));
+}
+
+function appendRow(stream, pkg) {
 	pkg = pkg.pop();
 
 	var repo = pkg.repository.url.split('/').slice(-2),
@@ -35,38 +37,33 @@ function append(stream, pkg) {
 		id = repo.join('/');
 
 	stream.write(
-		'[' + npmName + '](http://github.com/' + id + ') ' +
-		'| [![version](http://img.shields.io/npm/v/' + npmName + '.svg?style=flat-square)](http://npmjs.org/' + npmName + ') ' +
-		'| [![downloads](http://img.shields.io/npm/dm/' + npmName + '.svg?style=flat-square)](http://npmjs.org/' + npmName + ') ' +
-		'| [![status](http://img.shields.io/travis/' + id + '.svg?style=flat-square)](https://travis-ci.org/' + id + ')' +
-		'| [![coverage](http://img.shields.io/coveralls/' + id + '/master.svg?style=flat-square)](https://coveralls.io/r/' + id + ')' +
-		'| [![dependencies](http://david-dm.org/' + id + '.svg?style=flat-square)](http://david-dm.org/' + id + ') ' +
-		'| [![devDependencies](http://david-dm.org/' + id + '/dev-status.svg?style=flat-square)](http://david-dm.org/' + id + ')\n'
+		'[' + npmName                                                                                               + ' ](https://github.com/'             + id      + ') | ' +
+		'[![version  ](https://img.shields.io/npm/v/'               + npmName + '.svg?style=flat-square'            + ')](https://npmjs.org/package/'      + npmName + ') | ' +
+		'[![downloads](https://img.shields.io/npm/dm/'              + npmName + '.svg?style=flat-square'            + ')](https://npmjs.org/package/'      + npmName + ') | ' +
+		'[![status   ](https://img.shields.io/travis/'              + id      + '.svg?style=flat-square'            + ')](https://travis-ci.org/'          + id      + ') | ' +
+		'[![coverage ](https://img.shields.io/coveralls/'           + id      + '/master.svg?style=flat-square'     + ')](https://coveralls.io/r/'         + id      + ') | ' +
+		'[![climate  ](https://img.shields.io/codeclimate/github/'  + id      + '.svg?style=flat-square'            + ')](https://codeclimate.com/github/' + id      + ') | ' +
+		'[![deps     ](https://david-dm.org/'                       + id      + '.svg?style=flat-square'            + ')](https://david-dm.org/'           + id      + ') | ' +
+		'[![devDeps  ](https://david-dm.org/'                       + id      + '/dev-status.svg?style=flat-square' + ')](https://david-dm.org/'           + id      + ')\n'
 	);
 }
 
-Promise
-	.resolve('shannonmoeller')
-	.then(function (name) {
-		return getUserPackages(name);
-	})
-	.then(function (pkgs) {
-		return Promise.all(pkgs.map(getPackageInfo));
-	})
-	.then(function (pkgs) {
-		var stream;
+function buildTable(pkgs) {
+	var stream;
 
-		// Delete
-		fs.unlinkSync(file);
+	// Delete
+	fs.unlinkSync(file);
 
-		// Create
-		stream = fs.createWriteStream(file);
-		stream.write('---\n---\n\n# Shannon Moeller’s Dashboard\n\n');
+	// Create
+	stream = fs.createWriteStream(file);
+	stream.write('---\n---\n\n# Shannon Moeller’s Dashboard\n\n');
 
-		// Header
-		stream.write('repo | version | downloads | status | coverage | dependencies | devDependencies\n');
-		stream.write('-----|---------|-----------|--------|----------|--------------|----------------\n');
+	// Header
+	stream.write('repo | version | downloads | status | coverage | climate | deps | devDeps\n');
+	stream.write('-----|---------|-----------|--------|----------|---------|------|--------\n');
 
-		// Modules
-		return pkgs.map(append.bind(null, stream));
-	});
+	// Rows
+	pkgs.forEach(appendRow.bind(null, stream));
+}
+
+getUserPackages('shannonmoeller').then(getPackagesInfo).then(buildTable);
