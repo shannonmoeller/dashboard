@@ -58,11 +58,7 @@ function buildTable(pkgs) {
 	stream = fs.createWriteStream(file);
 	stream.write('---\n---\n\n# Shannon Moeller’s Dashboard\n\n');
 
-	// Header
-	stream.write('repo | version | downloads | status | coverage | climate | deps | devDeps\n');
-	stream.write('-----|---------|-----------|--------|----------|---------|------|--------\n');
-
-	// Rows
+	// Write
 	pkgs.forEach(appendRow.bind(null, stream));
 }
 
