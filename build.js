@@ -48,7 +48,7 @@ function appendRow(stream, pkg) {
 	);
 }
 
-function buildTable(pkgs) {
+function buildTable(users) {
 	var stream;
 
 	// Delete
@@ -59,7 +59,14 @@ function buildTable(pkgs) {
 	stream.write('---\n---\n\n# Shannon Moeller’s Dashboard\n\n');
 
 	// Write
-	pkgs.forEach(appendRow.bind(null, stream));
+	users.forEach(function (pkgs) {
+		pkgs.forEach(appendRow.bind(null, stream));
+	});
 }
 
-getUserPackages('shannonmoeller').then(getPackagesInfo).then(buildTable);
+Promise
+	.all([
+		getUserPackages('shannonmoeller').then(getPackagesInfo),
+		getUserPackages('toga').then(getPackagesInfo)
+	])
+	.then(buildTable);
